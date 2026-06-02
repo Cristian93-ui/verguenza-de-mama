@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/logo.jpeg.asset.json";
+import logoAsset from "@/assets/logo.jpeg";
 import { cn } from "@/lib/utils";
 
 interface LogoProps {
@@ -21,7 +21,7 @@ export function Logo({ size = 48, glow = false, className }: LogoProps) {
         />
       )}
       <img
-        src={logoAsset.url}
+        src={logoAsset}
         alt="La Vergüenza de Mamá — Entre Acordes y Partidas"
         width={size}
         height={size}
