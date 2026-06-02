@@ -13,7 +13,9 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
-import logoAsset from "@/assets/logo.jpeg.asset.json";
+import logoUrl from "@/assets/logo.jpeg";
+
+const OG_IMAGE = "https://laverguenzademama.com/og-image.jpeg";
 
 function NotFoundComponent() {
   return (
@@ -93,20 +95,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "theme-color", content: "#1C1C1E" },
       { property: "og:site_name", content: "La Vergüenza de Mamá" },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logoAsset.url },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logoAsset.url },
+      { name: "twitter:image", content: OG_IMAGE },
       { property: "og:title", content: "La Vergüenza de Mamá — Entre Acordes y Partidas" },
       { name: "twitter:title", content: "La Vergüenza de Mamá — Entre Acordes y Partidas" },
-      { name: "description", content: "A visually stunning website for the \"La Vergüenza de Mamá\" podcast." },
-      { property: "og:description", content: "A visually stunning website for the \"La Vergüenza de Mamá\" podcast." },
-      { name: "twitter:description", content: "A visually stunning website for the \"La Vergüenza de Mamá\" podcast." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a4f4c1a6-c9c6-4012-948e-1a40e9558d92/id-preview-9bbdcf9b--b5586477-d9d7-48a0-8a9e-495d911b84d3.lovable.app-1780435505582.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a4f4c1a6-c9c6-4012-948e-1a40e9558d92/id-preview-9bbdcf9b--b5586477-d9d7-48a0-8a9e-495d911b84d3.lovable.app-1780435505582.png" },
+      { property: "og:description", content: "El podcast donde Michito y Ch-peanuts hablan de música, juegos de mesa y todo lo que haría llorar a tu mamá." },
+      { name: "twitter:description", content: "El podcast donde Michito y Ch-peanuts hablan de música, juegos de mesa y todo lo que haría llorar a tu mamá." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/jpeg", href: logoAsset.url },
+      { rel: "icon", type: "image/jpeg", href: logoUrl },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

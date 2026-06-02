@@ -1,0 +1,5 @@
+name = "verguenza-de-mama"
+main = "dist/server/server.js"
+compatibility_date = "2026-06-02"
+compatibility_flags = ["nodejs_compat"]
+assets = { directory = "dist/client" }
